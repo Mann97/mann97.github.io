@@ -1,4 +1,5 @@
 self.addEventListener("notificationclick", function (event) {
+  console.log("notification open");
   const data = event.notification.data.FCM_MSG.data;
   console.log('Data',data);
 
@@ -8,60 +9,11 @@ self.addEventListener("notificationclick", function (event) {
       }).then(function (clientList) {
 
         if (clients.openWindow) {
-            if(data.url){
-                if (data.module === "Vendor") {
-                       return clients.openWindow(`${data.url}/vendor`);
-                }else if (data.module === "Agency") {
-                       return clients.openWindow(`${data.url}/agency`);
-                }else if (data.module === "Store") {
-                       return clients.openWindow(`${data.url}/vendor/vendorDetails?vendorUuid=${data.entityUuid}`);
-                 }
-                 else if (data.module === "ADS") {
-                        if(data.entityType === "VENDOR"){
-
-                            return  clients.openWindow(`${data.url}/vendor/vendorDetails/vendorStoreDetails?vendorUuid=${data.entityUuid}&storeUuid=${data.subEntityUuid}&tabIndex=1`);
-
-                        }else if(data.entityType === "AGENCY"){
-                           if(data.entityUuid && data.subEntityUuid && data.subEntityType === "CLIENT"){
-                             return clients.openWindow(`${data.url}/agency/agencyDetails/clientsDetails?agencyUuid=${data.entityUuid}&tabIndex=1&clientUuid=${data.subEntityUuid}&subTabIndex=1`);
-                             }else if (data.entityUuid){
-                             return clients.openWindow(`${data.url}/agency/agencyDetails?agencyUuid=${data.entityUuid}&tabIndex=2`);
-                             }else{
-                                return clients.openWindow(`${data.url}/dashBoard/notification`);
-                                }
-                        }else{
-                            return clients.openWindow(`${data.url}/dashBoard/notification`);
-                               }
-
-                 }
-                 else if (data.module === "Package") {
-
-                      if(data.entityType === "VENDOR"){
-                         return  clients.openWindow(`${data.url}/vendor/vendorDetails/vendorStoreDetails?vendorUuid=${data.entityUuid}&storeUuid=${data.subEntityUuid}&tabIndex=0`);
-                          }else if(data.entityType === "AGENCY"){
-                            if(data.entityUuid && data.subEntityUuid && data.subEntityType === "CLIENT"){
-
-                                  return clients.openWindow(`${data.url}/agency/agencyDetails/clientsDetails?agencyUuid=${data.entityUuid}&tabIndex=1&clientUuid=${data.subEntityUuid}&subTabIndex=0`);
-
-                                }else if (data.entityUuid){
-
-                                  return clients.openWindow(`${data.url}/agency/agencyDetails?agencyUuid=${data.entityUuid}&tabIndex=0`);
-
-                                  }else{
-                                      return clients.openWindow(`${data.url}/dashBoard/notification`);
-                                       }
-                      }
-
-                   }else if (data.module === "Ticket") {
-
-                          return clients.openWindow(`${data.url}/ticketManagement?ticketUuid=${data.moduleUuid}`);
-
-                   }else{
-
-                        return clients.openWindow(`${data.url}/dashBoard/notification`);
-                    }
+            if(data.operatorUrl){
+             if (data.module === "Notification") {
+                 return clients.openWindow(`${data.operatorUrl}/home`);
+             }
             }
-
         }
       })
   );
@@ -77,8 +29,8 @@ var  firebaseConfig = {
          projectId: "dasher-9a393",
          storageBucket: "dasher-9a393.appspot.com",
          messagingSenderId: "125348210814",
-         appId: "1:125348210814:web:a5926c1827895f90a5102f",
-         measurementId: "G-20ELSGK5LF"
+         appId: "1:125348210814:web:4867a51d80c31f1da5102f",
+         measurementId: "G-VERSXCQPDS"
        };
 firebase.initializeApp(firebaseConfig);
 const messaging = firebase.messaging();

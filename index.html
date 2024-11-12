@@ -1,46 +1,145 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="description" content="A new Flutter project.">
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
+    <!-- iOS meta tags & icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Dasher Operator">
+    <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png"/>
 
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <title>Odigo Admin</title>
-  <base href="/">
+    <title>Dasher Operator</title>
+    <link rel="manifest" href="manifest.json">
 
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+    <script>
+        window.flutterConfiguration = {
+            canvasKitBaseUrl: "/canvaskit/"
+        };
+    </script>
 
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="odigo_admin">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+    <script>
+    // The value below is injected by flutter build, do not touch.
+    const serviceWorkerVersion = "532433781";
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <!-- Croppie -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css"/>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/exif-js/2.3.0/exif.js"></script>
-  <script type="application/javascript"
-          defer src="/assets/packages/flutter_inappwebview_web/assets/web/web_support.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js"></script>
+    </script>
 
-  <title>odigo_admin</title>
-  <link rel="manifest" href="manifest.json">
+    <!-- Croppie -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css" />
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/exif-js/2.3.0/exif.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js"></script>
+
+    <!-- This script adds the flutter initialization JS code -->
+    <script src="lottie-player.js"></script>
+    <script src="flutter.js" defer></script>
 </head>
+
+<style>
+.loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+  .loader {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after,
+.loader::before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #00F;
+  width: 6px;
+  height: 6px;
+  transform: translate(150%, 150%);
+  border-radius: 50%;
+}
+.loader::before {
+  left: auto;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  transform: translate(-150%, -150%);
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+</style>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+<div id="lottie-animation" style="width: 100%; max-width: 100%; height: auto;">
+</div>
+<script>
+    function isMobileDevice() {
+        return (typeof window.orientation != "undefined") || (navigator.userAgent.indexOf('IEMobile') != -1);
+    }
+
+    const lottieContainer = document.getElementById('lottie-animation');
+    const lottiePlayer = document.createElement('lottie-player');
+
+    lottiePlayer.style.width = '100%';
+    lottiePlayer.style.maxWidth = '100%';
+    lottiePlayer.style.height = 'auto';
+    lottiePlayer.background = 'transparent';
+    lottiePlayer.speed = '1';
+    lottiePlayer.loop = true;
+    lottiePlayer.autoplay = true;
+    if (isMobileDevice()) {
+        lottiePlayer.src = 'anim_splash_mobile.json';
+    } else {
+        lottiePlayer.src = 'anim_splash.json';
+    }
+
+    lottieContainer.appendChild(lottiePlayer);
+</script>
+<script>
+    window.addEventListener('load', function(ev) {
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+
+
+
+</script>
 </body>
 </html>
