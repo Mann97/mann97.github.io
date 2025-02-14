@@ -1,6 +1,6 @@
 {
-    "name": "Dasher Operator",
-    "short_name": "Dasher Operator",
+    "name": "odigo_vendor",
+    "short_name": "odigo_vendor",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
