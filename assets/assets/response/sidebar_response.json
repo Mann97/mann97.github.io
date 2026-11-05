@@ -1,0 +1,331 @@
+{
+  "message": "permission detail fetched successfully",
+  "data": [
+    {
+      "modulesUuid": "P2I5-CSNR-CX83-I22B",
+      "modulesName": "Dashboard",
+      "canView": true,
+      "canEdit": false,
+      "canAdd": false,
+      "canDelete": false,
+      "canViewSidebar": true,
+      "children": []
+    },
+    {
+      "modulesUuid": "1",
+      "modulesName": "Master",
+      "canView": true,
+      "canEdit": true,
+      "canAdd": true,
+      "canDelete": true,
+      "canViewSidebar": true,
+      "children": [
+        {
+          "modulesUuid": "K5B0-QZRG-EIS6-MR5G",
+          "modulesName": "Country",
+          "canView": true,
+          "canEdit": true,
+          "canAdd": true,
+          "canDelete": true,
+          "canViewSidebar": true
+        },
+        {
+          "modulesUuid": "A2B0-QZRG-EIS6-MR5J",
+          "modulesName": "State",
+          "canView": true,
+          "canEdit": true,
+          "canAdd": true,
+          "canDelete": true,
+          "canViewSidebar": true
+        },
+        {
+          "modulesUuid": "VT4R-MVLD-K3UD-AGOI",
+          "modulesName": "City",
+          "canView": true,
+          "canEdit": true,
+          "canAdd": true,
+          "canDelete": true,
+          "canViewSidebar": true
+        },
+        {
+          "modulesUuid": "E99A-A51Z-06OE-AF46",
+          "modulesName": "Ticket Reason",
+          "canView": true,
+          "canEdit": true,
+          "canAdd": true,
+          "canDelete": true,
+          "canViewSidebar": true
+        },
+        {
+          "modulesUuid": "863A-WO18-KZTI-FWAF",
+          "modulesName": "Medical Device",
+          "canView": true,
+          "canEdit": true,
+          "canAdd": true,
+          "canDelete": true,
+          "canViewSidebar": true,
+          "children": []
+        },
+        {
+          "modulesUuid": "AUQH-HPVQ-FY29-RVVJ",
+          "modulesName": "Medical Test",
+          "canView": true,
+          "canEdit": true,
+          "canAdd": true,
+          "canDelete": true,
+          "canViewSidebar": true,
+          "children": []
+        },
+        {
+          "modulesUuid": "JG09-88BK-12OP-NMP3",
+          "modulesName": "Assessment",
+          "canView": true,
+          "canEdit": true,
+          "canAdd": true,
+          "canDelete": true,
+          "canViewSidebar": true,
+          "children": []
+        }
+      ]
+    },
+    {
+      "modulesUuid": "I22B-CX83-P2I5-CSNR",
+      "modulesName": "Child Robot Master",
+      "canView": true,
+      "canEdit": true,
+      "canAdd": true,
+      "canDelete": true,
+      "canViewSidebar": true,
+      "children": [
+        {
+          "modulesUuid": "863A-FWAF-KZTI-WO18",
+          "modulesName": "Age Group",
+          "canView": true,
+          "canEdit": true,
+          "canAdd": true,
+          "canDelete": true,
+          "canViewSidebar": true,
+          "children": []
+        },
+        {
+          "modulesUuid": "KZTI-FWAF-WO18-863A",
+          "modulesName": "Vaccination",
+          "canView": true,
+          "canEdit": true,
+          "canAdd": true,
+          "canDelete": true,
+          "canViewSidebar": true,
+          "children": []
+        },
+        {
+          "modulesUuid": "ZXCB-QAE7-PSW2-F8FI",
+          "modulesName": "Vaccination Schedule",
+          "canView": true,
+          "canEdit": true,
+          "canAdd": true,
+          "canDelete": true,
+          "canViewSidebar": true
+        },
+        {
+          "modulesUuid": "KZTI-863A-WO18-FWAF",
+          "modulesName": "Milestone Category",
+          "canView": true,
+          "canEdit": true,
+          "canAdd": true,
+          "canDelete": true,
+          "canViewSidebar": true,
+          "children": []
+        },
+        {
+          "modulesUuid": "ABCD-EFGH-IJKL-MNOP",
+          "modulesName": "Growth Standard",
+          "canView": true,
+          "canEdit": true,
+          "canAdd": true,
+          "canDelete": true,
+          "canViewSidebar": true,
+          "children": []
+        }
+      ]
+    },
+    {
+      "modulesUuid": "JWOA-X8W8-N9UC-L60P",
+      "modulesName": "Device",
+      "canView": true,
+      "canEdit": true,
+      "canAdd": true,
+      "canDelete": true,
+      "canViewSidebar": true,
+      "children": []
+    },
+    {
+      "modulesUuid": "6EUX-X8LW-E5QO-D2XG",
+      "modulesName": "Destination",
+      "canView": true,
+      "canEdit": true,
+      "canAdd": true,
+      "canDelete": true,
+      "canViewSidebar": true,
+      "children": []
+    },
+    {
+      "modulesUuid": "1",
+      "modulesName": "Manage Users",
+      "canView": true,
+      "canEdit": true,
+      "canAdd": true,
+      "canDelete": true,
+      "canViewSidebar": true,
+      "children": [
+        {
+          "modulesUuid": "6ZCI-0AW5-6OYZ-X0AX",
+          "modulesName": "Destination User",
+          "canView": true,
+          "canEdit": true,
+          "canAdd": true,
+          "canDelete": true,
+          "canViewSidebar": true
+        },
+        {
+          "modulesUuid": "W0JD-50YZ-89FD-HA01",
+          "modulesName": "Role Permission",
+          "canView": true,
+          "canEdit": true,
+          "canAdd": true,
+          "canDelete": true,
+          "canViewSidebar": true,
+          "children": []
+        },
+        {
+          "modulesUuid": "NUPO-UCE4-60PP-EN6B",
+          "modulesName": "Users",
+          "canView": true,
+          "canEdit": true,
+          "canAdd": true,
+          "canDelete": true,
+          "canViewSidebar": true,
+          "children": []
+        }
+      ]
+    },
+    {
+      "modulesUuid": "5D7X-X4Y6-FSJG-81DI",
+      "modulesName": "Informative Content",
+      "canView": true,
+      "canEdit": true,
+      "canAdd": true,
+      "canDelete": true,
+      "canViewSidebar": true,
+      "children": []
+    },
+    {
+      "modulesUuid": "1",
+      "modulesName": "Support",
+      "canView": true,
+      "canEdit": true,
+      "canAdd": true,
+      "canDelete": true,
+      "canViewSidebar": true,
+      "children": [
+        {
+          "modulesUuid": "IXCH-HB4E-461E-NLI3",
+          "modulesName": "Ticket",
+          "canView": true,
+          "canEdit": true,
+          "canAdd": true,
+          "canDelete": true,
+          "canViewSidebar": true
+        },
+        {
+          "modulesUuid": "3D6V-OAPP-GIGX-XN16",
+          "modulesName": "CMS",
+          "canView": true,
+          "canEdit": true,
+          "canAdd": true,
+          "canDelete": true,
+          "canViewSidebar": true,
+          "children": []
+        },
+        {
+          "modulesUuid": "RM4C-JZPZ-5GYF-UHRO",
+          "modulesName": "FAQ",
+          "canView": true,
+          "canEdit": true,
+          "canAdd": true,
+          "canDelete": true,
+          "canViewSidebar": true
+        },
+        {
+          "modulesUuid": "0GDF-EEIH-UBDF-BIH9",
+          "modulesName": "Company",
+          "canView": true,
+          "canEdit": true,
+          "canAdd": true,
+          "canDelete": true,
+          "canViewSidebar": true
+        }
+      ]
+    },
+    {
+      "modulesUuid": "UR09-N8V2-CML0-5C9E",
+      "modulesName": "Patient",
+      "canView": true,
+      "canEdit": true,
+      "canAdd": true,
+      "canDelete": true,
+      "canViewSidebar": true,
+      "children": [
+        {
+          "modulesUuid": "A2B0-EIS6-MR5J-QZRG",
+          "modulesName": "Adult Patient",
+          "canView": true,
+          "canEdit": true,
+          "canAdd": true,
+          "canDelete": true,
+          "canViewSidebar": true
+        },
+        {
+          "modulesUuid": "VT4R-K3UD-AGOI-MVLD",
+          "modulesName": "Child Patient",
+          "canView": true,
+          "canEdit": true,
+          "canAdd": true,
+          "canDelete": true,
+          "canViewSidebar": true
+        }
+      ]
+    },
+    {
+      "modulesUuid": "306L-POSG-31M6-9EBC",
+      "modulesName": "Milestone",
+      "canView": true,
+      "canEdit": true,
+      "canAdd": true,
+      "canDelete": true,
+      "canViewSidebar": true,
+      "children": []
+    },
+    {
+      "modulesUuid": "306L-31M6-POSG-9EBC",
+      "modulesName": "President Video",
+      "canView": true,
+      "canEdit": true,
+      "canAdd": true,
+      "canDelete": true,
+      "canViewSidebar": true,
+      "children": []
+    },
+
+    {
+      "modulesUuid": "306L-31L6-POJG-9EBD",
+      "modulesName": "Tele Doctor",
+      "canView": true,
+      "canEdit": true,
+      "canAdd": true,
+      "canDelete": true,
+      "canViewSidebar": true,
+      "children": []
+    }
+  ],
+  "status": 200
+}
